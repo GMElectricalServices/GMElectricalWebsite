@@ -1,0 +1,1071 @@
+/*
+ * GM Electrical Services CSS - Option 2: Energetic & Bold (Blue & Green Palette)
+ * A dynamic and impactful design using a blue primary palette with
+ * subtle vibrant green accents, inspired by your van's branding.
+ */
+
+/* Google Fonts: Montserrat and Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Roboto:wght@300;400;500&display=swap');
+
+/* Define main color variables based on your van */
+:root {
+    --primary-dark-blue: #2D4057; /* Deep slate blue, similar to van's body */
+    --secondary-vibrant-blue: #306EEF; /* Brighter, more vibrant blue for headlines/accents */
+    --accent-green: #4CAF50; /* Distinct green from van's text/logo */
+    --light-background: #EDF2F7; /* Very light grey-blue */
+    --dark-text: #2C3E50; /* General dark text color */
+    --light-text: #FFFFFF; /* Pure white for maximum contrast */
+    --hover-green-light: #66BB6A; /* Lighter shade of accent green for hover */
+    --border-light-grey: #CBD5E0; /* Light grey for form borders */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-text);
+    line-height: 1.7;
+    background-color: var(--light-background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    background-color: var(--primary-dark-blue);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 3.2rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--secondary-vibrant-blue);
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-top: 0.8rem;
+    font-weight: 300;
+    color: var(--light-text);
+}
+
+nav {
+    background-color: var(--primary-dark-blue);
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 0.4rem;
+}
+
+/* Nav Link Styling for Gradient Hover */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, border-radius 0.3s ease;
+}
+
+/* Pseudo-element for the gradient background */
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(45deg, var(--secondary-vibrant-blue), var(--accent-green));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover and Active states */
+nav ul li a:hover,
+nav ul li a.active {
+    color: white;
+    transform: translateY(-3px);
+    border-radius: 8px;
+}
+
+nav ul li a:hover::before,
+nav ul li a.active::before {
+    opacity: 1;
+}
+
+/* Sub-navigation for Solar PV */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-dark-blue);
+    min-width: 150px;
+    z-index: 100;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    margin: 0;
+}
+
+nav ul li ul li a {
+    padding: 0.7rem 1.0rem;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+nav ul li ul li a:hover {
+    background-color: var(--secondary-vibrant-blue);
+    color: white;
+}
+
+/* Main Content Styling */
+.container {
+    width: 88%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2.5rem 3rem;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+}
+
+section {
+    margin-bottom: 3.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px dashed var(--border-light-grey);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-text);
+    margin-bottom: 1.3rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.8rem;
+    border-bottom: 4px solid var(--secondary-vibrant-blue);
+    padding-bottom: 0.8rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--accent-green);
+}
+
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    color: var(--dark-text);
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 25px;
+    margin-bottom: 1.2rem;
+}
+
+ul li {
+    margin-bottom: 0.6rem;
+}
+
+/* Specific Section Styles for the Counter */
+.stats-section {
+    background-color: var(--primary-dark-blue);
+    padding: 3.5rem;
+    text-align: center;
+    margin: 3.5rem auto;
+    max-width: 900px;
+    width: 88%;
+    border-radius: 16px;
+    border: 1px solid var(--primary-dark-blue);
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    position: relative;
+    overflow: hidden;
+
+    /* Background image for solar panels */
+    background-image: url('../images/american-public-power-association-513dBrMJ_5w-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* CORRECTED: Darker overlay to ensure text readability over image */
+    background-color: rgba(26, 32, 44, 0.3); /* Restored appropriate opacity */
+    border-radius: 16px;
+    z-index: 1;
+}
+
+/* Styles for the counter number (span) */
+.stats-section span {
+    position: relative;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5em;
+    font-weight: 800;
+    color: var(--accent-green);
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,1);
+    line-height: 1.2;
+}
+
+/* Styles for the "kWh installed" text (small) */
+.stats-section small {
+    position: relative;
+    z-index: 2;
+    display: block;
+    font-size: 1.1em;
+    margin-top: 0;
+    color: var(--light-text);
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+/* Featured case studies section */
+.featured-case-studies h2 {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Specific 2-column layout for services-grid on larger screens */
+@media (min-width: 769px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Case study grid layout - 3 columns for equal cards in rows */
+    .case-study-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid var(--border-light-grey);
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+}
+
+/* Add a subtle gradient border on hover */
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(45deg, var(--secondary-vibrant-blue), var(--accent-green));
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-item:hover::before {
+    opacity: 1;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.18);
+    border-color: transparent;
+}
+
+.service-item h3, .service-item h4, .service-item p, .service-item a {
+    position: relative;
+    z-index: 1;
+}
+
+.service-item h3, .service-item h4 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+}
+
+.service-item p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: auto;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.service-item a {
+    display: inline-block;
+    background-color: var(--secondary-vibrant-blue);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-self: center;
+    margin-bottom: 0;
+}
+
+.service-item a:hover {
+    background-color: var(--accent-green);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact Form Styling */
+.contact-info {
+    background-color: var(--light-background);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-light-grey);
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+    color: var(--dark-text);
+}
+
+.contact-info p strong {
+    color: var(--dark-text);
+}
+
+.contact-info a {
+    color: var(--accent-green);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--hover-green-light);
+    text-decoration: underline;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    font-size: 1.05rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-light-grey);
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-vibrant-blue);
+    box-shadow: 0 0 0 3px rgba(48, 110, 239, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: var(--secondary-vibrant-blue);
+    color: white;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: var(--accent-green);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.3);
+}
+
+.required-asterisk {
+    color: #EF4444;
+    font-weight: bold;
+}
+
+/* Reviews Section */
+.reviews-section {
+    background-color: #E6F0F9;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 16px;
+    margin-top: 3.5rem;
+    border: 1px solid #C0D8EE;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.reviews-section h2 {
+    color: var(--dark-text);
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.reviews-section p {
+    font-style: italic;
+    color: #555;
+    font-size: 1.15rem;
+    max-width: 900px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.reviews-section .review-prompt {
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+.reviews-section .review-prompt a {
+    color: var(--accent-green);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.reviews-section .review-prompt a:hover {
+    color: var(--hover-green-light);
+}
+
+/* Style for the smaller call-to-action boxes to be more compact */
+.call-to-action-box {
+    background-color: white;
+    border: 1px solid var(--border-light-grey);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+    margin: 1.5rem auto;
+    max-width: 350px;
+    min-height: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    box-sizing: border-box;
+
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Pseudo-element for gradient border on hover for call-to-action-box */
+.call-to-action-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(45deg, var(--secondary-vibrant-blue), var(--accent-green));
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.call-to-action-box:hover::before {
+    opacity: 1;
+}
+
+.call-to-action-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border-color: transparent;
+}
+
+/* Ensure content stays above the pseudo-element */
+.call-to-action-box a {
+    position: relative;
+    z-index: 1;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--secondary-vibrant-blue);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    line-height: 1;
+}
+
+.call-to-action-box a:hover {
+    color: var(--light-text);
+}
+
+/* Footer Styling with improved visibility */
+footer {
+    background-color: var(--primary-dark-blue);
+    color: var(--light-text);
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    line-height: 1.6;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Explicitly set color for footer paragraphs and links to ensure visibility */
+footer p, footer a {
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- FAQ Section Styles --- */
+.faq-section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px dashed var(--border-light-grey);
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.faq-item {
+    background-color: white;
+    border: 1px solid var(--border-light-grey);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* Gradient border on hover for FAQ item */
+.faq-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(45deg, var(--secondary-vibrant-blue), var(--accent-green));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.faq-item:hover::before {
+    opacity: 1;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: transparent;
+}
+
+.faq-question {
+    padding: 1.2rem 1.8rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: var(--dark-text);
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: inherit;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.faq-item:hover .faq-question h3 {
+    color: var(--light-text);
+}
+
+.toggle-icon {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+    transition: transform 0.3s ease;
+    color: var(--secondary-vibrant-blue);
+    padding-left: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(0deg);
+    color: var(--accent-green);
+}
+
+.faq-item:hover .toggle-icon {
+    color: var(--light-text);
+}
+
+.faq-answer {
+    background-color: #F8F8F8;
+    padding: 0 1.8rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, background-color 0.3s ease;
+    color: var(--dark-text);
+    position: relative;
+    z-index: 1;
+}
+
+.faq-answer p {
+    margin: 0;
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    color: var(--dark-text);
+}
+
+.faq-item.active .faq-answer {
+    /* Max-height is set dynamically by JavaScript */
+    background-color: var(--light-background);
+}
+
+/* Optional: Slight adjustment for inner elements on hover when answer is open */
+.faq-item.active:hover .faq-answer {
+    background-color: rgba(237, 242, 247, 0.9);
+}
+
+/* --- Solar PV Process Flow Styles --- */
+
+/* Basic styling for the section container */
+.solar-pv-process {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px dashed var(--border-light-grey);
+}
+
+/* Ensure the main heading and intro paragraph don't stretch too wide */
+.solar-pv-process h2,
+.solar-pv-process p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+}
+
+/* Grid container for the process steps */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 2.5rem;
+}
+
+/* Styling for each individual process step box */
+.process-step {
+    background-color: white;
+    border: 1px solid var(--border-light-grey);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+}
+
+/* Hover effect for the process steps */
+.process-step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Styling for the step number circle */
+.step-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--accent-green);
+    background-color: var(--light-background);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--accent-green);
+    flex-shrink: 0;
+    margin-bottom: 0.8rem;
+}
+
+/* Styling for the step title (h3) */
+.process-step h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary-vibrant-blue);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+/* Styling for the step description paragraph */
+.process-step p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 0;
+    }
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        text-align: center;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    nav ul li ul {
+        position: static;
+        min-width: unset;
+        text-align: center;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    nav ul li ul li a {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        background-color: rgba(0,0,0,0.1);
+    }
+
+    .container {
+        width: 95%;
+        padding: 2rem 1.5rem;
+        margin: 2.5rem auto;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .stats-section {
+        padding: 3rem 2rem;
+        max-width: 712.5px;
+    }
+
+    .stats-section span {
+        font-size: 3.8em;
+    }
+    .stats-section small {
+        font-size: 1.1em;
+    }
+
+    .services-grid,
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-item {
+        padding: 1.2rem;
+        min-height: 200px;
+    }
+
+    .service-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-item p {
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+        font-size: 0.9rem;
+    }
+
+    .service-item a {
+        margin-top: 1rem;
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
+        width: auto;
+        align-self: center;
+    }
+
+    .call-to-action-box {
+        padding: 0.6rem 1.2rem;
+        max-width: 90%;
+        height: 35px;
+    }
+
+    .call-to-action-box a {
+        font-size: 1.0rem;
+    }
+
+    footer {
+        padding: 2.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    /* Responsive adjustments for FAQ */
+    .faq-question {
+        padding: 1rem 1.2rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1.05rem;
+    }
+
+    .toggle-icon {
+        font-size: 1.5rem;
+    }
+
+    .faq-answer {
+        padding: 0 1.2rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.95rem;
+        padding-bottom: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 0;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    .container {
+        padding: 1rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .stats-section {
+        max-width: 360px;
+        padding: 2rem 1rem;
+    }
+
+    .stats-section span {
+        font-size: 3em;
+    }
+    .stats-section small {
+        font-size: 0.95em;
+    }
+
+    .service-item {
+        min-height: 180px;
+        padding: 1rem;
+    }
+
+    .service-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-item p {
+        font-size: 0.85rem;
+    }
+
+    .service-item a {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+        width: auto;
+        align-self: center;
+    }
+
+    .call-to-action-box {
+        padding: 0.5rem 1rem;
+        max-width: 95%;
+        height: 30px;
+    }
+
+    .call-to-action-box a {
+        font-size: 0.95rem;
+    }
+
+    footer {
+        padding: 2rem 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* Responsive adjustments for FAQ */
+    .faq-question {
+        padding: 0.8rem 1rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+
+    .toggle-icon {
+        font-size: 1.3rem;
+    }
+
+    .faq-answer {
+        padding: 0 1rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.9rem;
+        padding-bottom: 1rem;
+    }
+}

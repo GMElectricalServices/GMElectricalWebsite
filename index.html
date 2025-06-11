@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GM Electrical Services - Renewable Energy & Electrical Solutions</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Add this to your style.css or within a <style> tag in your HTML */
+        .image-gallery {
+            display: flex;
+            justify-content: space-around; /* Distributes space between and around items */
+            align-items: flex-start; /* Aligns items to the top if they have different heights */
+            gap: 20px; /* Adds space between the images */
+            margin-top: 20px; /* Adds space above the image gallery */
+        }
+
+        .image-gallery img {
+            width: 48%; /* Each image takes up roughly half the width, allowing for gap */
+            max-width: 100%; /* Ensures images don't overflow their container */
+            height: auto; /* Maintains aspect ratio */
+            display: block; /* Removes extra space below the image */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+        }
+
+        /* Basic responsiveness for smaller screens */
+        @media (max-width: 768px) {
+            .image-gallery {
+                flex-direction: column; /* Stack images vertically on smaller screens */
+                align-items: center; /* Center images when stacked */
+            }
+            .image-gallery img {
+                width: 90%; /* Make images take up more width on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>GM Electrical Services</h1>
+        <p>Your Partner in Renewable Energy & Expert Electrical Solutions</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li>
+                <a href="solar-pv.html">Solar PV</a>
+                <ul>
+                    <li><a href="solar-pv.html#domestic-solar">Domestic</a></li>
+                    <li><a href="solar-pv.html#commercial-solar">Commercial</a></li>
+                </ul>
+            </li>
+            <li><a href="battery-storage.html">Battery Storage</a></li>
+            <li><a href="ev-chargers.html">EV Chargers</a></li>
+            <li><a href="electrical-work.html">Electrical Work</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="stats-section">
+        <span id="kwInstalledCounter">0</span>
+        <small>kWh installed</small>
+    </div>
+
+    <div class="container">
+        <section>
+            <h2>Welcome to GM Electrical Services</h2>
+            <p>At GM Electrical Services, we are dedicated electrical contractors at the forefront of renewable energy. Our primary expertise lies in delivering high-quality renewable solutions, including the design and installation of efficient Solar PV systems, robust Battery Storage setups for energy independence, and reliable EV Charging infrastructure. Beyond renewables, our certified electricians manage all aspects of general electrical work, ensuring safety and efficiency for homes, businesses, and industrial sites.</p>
+            <p>We operate from our base in Preston, extending our services to the wider Lancashire area and nationwide across the UK.</p>
+
+            </section>
+
+        <section>
+            <h2>Our Core Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Solar PV Solutions</h3>
+                    <p>Harness the sun's power to reduce your electricity bills and carbon footprint. We design and install high-performance solar panel systems for homes and businesses.</p>
+                    <a href="solar-pv.html">Learn More</a>
+                </div>
+                <div class="service-item">
+                    <h3>Battery Storage</h3>
+                    <p>Optimize your energy usage and increase independence by storing excess power. Our battery solutions integrate seamlessly with new or existing solar systems.</p>
+                    <a href="battery-storage.html">Learn More</a>
+                </div>
+                <div class="service-item">
+                    <h3>EV Charger Installations</h3>
+                    <p>Power your electric vehicle efficiently at home or at your business. We install reliable EV charging points for convenient and safe charging.</p>
+                    <a href="ev-chargers.html">Learn More</a>
+                </div>
+                <div class="service-item">
+                    <h3>General Electrical Work</h3>
+                    <p>From full rewires and consumer unit upgrades to fault finding and safety certificates, our certified electricians handle all your domestic and commercial needs.</p>
+                    <a href="electrical-work.html">Learn More</a>
+                </div>
+            </div>
+            <div class="image-gallery">
+                <img src="assets/images/van-image-1.jpg" alt="Description of Image 1" title="Title for Image 1">
+                <img src="assets/images/van-image-2.jpg" alt="Description of Image 2" title="Title for Image 2">
+            </div>
+            </section>
+
+        <section class="reviews-section">
+            <h2>What Our Customers Say</h2>
+            <p>"GM Electrical Services provided an outstanding installation. Professional, efficient, and truly experts in their field. Highly recommend!"</p>
+            <p>"Excellent service from start to finish. Our new solar system is performing beyond expectations. Thank you!"</p>
+            <p>"Quick response to an urgent electrical issue. The team was courteous and resolved the problem effectively. Five stars!"</p>
+            <p class="review-prompt">Your satisfaction is our priority. We invite our customers to share their experience with GM Electrical Services!</p>
+            <a href="https://www.google.com/search?sca_esv=8216bfb635286ce0&sxsrf=AE3TifOjOC5Hqo3eqilHMjTGRI9nDQ4Q7Q:1749652990536&si=AMgyJEvkVjFQtirYNBhM3ZJIRTaSJ6PxY6y1_6WZHGInbzDnMU62FHp8AXgbj2DGNbwEPlVywPN-4XejOebcJBbi1GSNQJVAmEmlm5R2zAbUYmcau1euyW95UwcYBZP_OJzwHnXTBf59l4ZX_FxrH6j2tnCzeNCwkA%3D%3D&q=G+M+Electrical+Services+Reviews&sa=X&ved=2ahUKEwiiueynzemNAxV3U0EAHWBKNm0Q0bkNegQIKhAD&biw=1272&bih=594&dpr=1.5" target="_blank" style="display:inline-block; background-color:#f4b400; color:white; padding:10px 20px; border-radius:5px; text-decoration:none; margin-top:15px;">Leave Us a Review on Google!</a>
+        </section>
+
+        <section>
+            <h2>Contact GM Electrical Services</h2>
+            <p>Ready to explore your energy options or need reliable electrical services? Get in touch with our team today!</p>
+            <div class="contact-details-home"> <p><strong>Address:</strong> 201 Liverpool Road, Penwortham, Preston, PR1 0QD</p>
+                <p><strong>Email:</strong> <a href="mailto:sales@gmelectrical-services.co.uk">sales@gmelectrical-services.co.uk</a></p>
+                <p><strong>Phone:</strong> <a href="tel:07958734613">07958 734613</a></p>
+                <p><strong>Working Hours:</strong> Monday to Friday - 8am to 5pm</p>
+            </div>
+            <p>For more detailed enquiries, please visit our <a href="contact.html">Contact Us page</a>.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 GM Electrical Services. All rights reserved.</p>
+        <p>Based in Preston, serving Lancashire & Nationwide</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const counterElement = document.getElementById('kwInstalledCounter');
+            const targetNumber = 850000; // The final number you want to count to
+            const duration = 2000; // 2 seconds in milliseconds (2000ms)
+            let startTimestamp = null;
+
+            function animateCounter(timestamp) {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = timestamp - startTimestamp;
+                let percentage = Math.min(progress / duration, 1); // Ensure percentage doesn't exceed 1
+
+                // Apply an easing function to make it slow down towards the end
+                // This is a cubic ease-out function: 1 - (1 - x)^3
+                percentage = 1 - Math.pow(1 - percentage, 3);
+                
+                const currentValue = Math.floor(percentage * targetNumber);
+
+                // Update text content with comma separators
+                counterElement.textContent = currentValue.toLocaleString();
+
+                // Stop animation if complete
+                if (percentage < 1) {
+                    requestAnimationFrame(animateCounter);
+                } else {
+                    // Ensure it reaches the exact target number at the very end
+                    counterElement.textContent = targetNumber.toLocaleString();
+                }
+            }
+
+            // Start the animation when the page loads
+            requestAnimationFrame(animateCounter);
+        });
+    </script>
+
+</body>
+</html>
